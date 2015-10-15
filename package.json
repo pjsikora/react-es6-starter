@@ -1,0 +1,25 @@
+{
+  "name": "react-es6-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulp.js",
+  "dependencies": {
+    "gulp-babel": "^5.2.1"
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "jquery": "^2.1.4",
+    "react-dom": "^0.14.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
