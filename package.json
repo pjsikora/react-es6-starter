@@ -12,6 +12,7 @@
     "gulp": "^3.9.0",
     "gulp-sourcemaps": "^1.6.0",
     "jquery": "^2.1.4",
+    "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",

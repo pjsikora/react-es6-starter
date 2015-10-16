@@ -1,11 +1,11 @@
 var outputPath = './build',
-gulp = require('gulp'),
-sourcemaps = require('gulp-sourcemaps'),
-source = require('vinyl-source-stream'),
-buffer = require('vinyl-buffer'),
-browserify = require('browserify'),
-watchify = require('watchify'),
-babel = require('babelify');
+    gulp = require('gulp'),
+    sourcemaps = require('gulp-sourcemaps'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
+    browserify = require('browserify'),
+    watchify = require('watchify'),
+    babel = require('babelify');
 
 function compile(watch) {
     var bundler = watchify(browserify('./source/js/app.js', { debug: true }).transform(babel));
@@ -32,10 +32,15 @@ function watch() {
 };
 
 gulp.task('build', function() { return compile(); });
+
 gulp.task('watch', function() { return watch(); });
-gulp.task('default', ['watch', 'copy']);
+
+
 
 gulp.task('copy', function() {
     return gulp.src('./source/*.html')
     .pipe(gulp.dest(outputPath));
 });
+
+
+gulp.task('default', ['watch', 'copy']);
