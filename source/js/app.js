@@ -1,13 +1,13 @@
 import Popup from './classes/Popup';
 
-import ReactModule from './classes/ReactModule';
+import ReactModule from './classes/PostsModule';
 import Fabrique from './classes/Fabrique';
 
 var $ = require('jquery');
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var feed = {
+var localFeed = {
   "status": "ok",
   "count": 92,
   "count_total": 92,
@@ -46,7 +46,7 @@ var feed = {
         }
       ],
       "tag": [
-        
+
       ],
       "author": [
         {
@@ -97,7 +97,7 @@ var feed = {
         }
       ],
       "tag": [
-        
+
       ],
       "author": [
         {
@@ -148,7 +148,7 @@ var feed = {
         }
       ],
       "tag": [
-        
+
       ],
       "author": [
         {
@@ -199,7 +199,7 @@ var feed = {
         }
       ],
       "tag": [
-        
+
       ],
       "author": [
         {
@@ -324,7 +324,7 @@ var feed = {
         }
       ],
       "tag": [
-        
+
       ],
       "author": [
         {
@@ -375,7 +375,7 @@ var feed = {
         }
       ],
       "tag": [
-        
+
       ],
       "author": [
         {
@@ -426,7 +426,7 @@ var feed = {
         }
       ],
       "tag": [
-        
+
       ],
       "author": [
         {
@@ -605,7 +605,7 @@ var feed = {
         }
       ],
       "tag": [
-        
+
       ],
       "author": [
         {
@@ -636,10 +636,10 @@ var feed = {
       "excerpt": " ",
       "parent": "0",
       "category": [
-        
+
       ],
       "tag": [
-        
+
       ],
       "author": [
         {
@@ -670,10 +670,10 @@ var feed = {
       "excerpt": "Hi,  My name is Piotr Sikora. I'm Front End Developer living in Kielce and proudly supporting Front End Team in Nitro Digital as a Lead Front End Developer.  Ive started my &hellip; <a href=\"http:\/\/fedojo.com\/?page_id=630\"> Continue reading <span class=\"meta-nav\">&rarr;<\/span><\/a>",
       "parent": "0",
       "category": [
-        
+
       ],
       "tag": [
-        
+
       ],
       "author": [
         {
@@ -694,9 +694,11 @@ var feed = {
   ]
 };
 
+var remoteFeed = "http://fedojo.com/?wpapi=get_posts&dev=1";
 
+var feed = localFeed;
 
-ReactDOM.render(<ReactModule data={feed.posts}/>, document.getElementById('go'));
+ReactDOM.render(<PostsModule data={feed}/>, document.getElementById('go'));
 // ReactDOM.render(<ReactModule name="name" />, document.getElementById('go'));
 // ReactDOM.render(<ReactModule name="name" />, document.getElementById('go'));
 // ReactDOM.render(<Fabrique></Fabrique>, document.getElementById('go'));

@@ -2,10 +2,16 @@ var $ = require('jquery'),
     React = require('react'),
     ReactDOM = require('react-dom');
 
-class ReactModule extends React.Component {
+class PostsModule extends React.Component {
   tick() {
     console.log('CLicked element');
     console.log(this);
+  }
+
+  getFeed() {
+    var promise = new Promise(function(resolve, reject) {
+
+    });
   }
 
   listItemClick() {
@@ -34,4 +40,4 @@ class ReactModule extends React.Component {
 
 //
 
-export default ReactModule;
+export default PostsModule;
